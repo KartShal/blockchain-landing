@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
 
 const NAV_LINKS = ["Smart Contracts", "Services", "Solutions", "Roadmap", "Whitepaper"];
