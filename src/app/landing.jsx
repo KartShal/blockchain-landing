@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 const NAV_LINKS = ["Smart Contracts", "Services", "Solutions", "Roadmap", "Whitepaper"];
 
@@ -378,62 +379,18 @@ export default function App() {
 
         {/* Robot illustration placeholder */}
         <div style={{
-          position: "relative", zIndex: 2, marginTop: 60,
-          width: "100%", maxWidth: 900,
-          height: 340,
-          background: "linear-gradient(180deg, transparent 0%, rgba(67,97,238,0.08) 40%, rgba(114,9,183,0.15) 100%)",
-          borderRadius: "60% 60% 0 0",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          overflow: "hidden",
-        }}>
-          {/* Infinity loop visual */}
-          <svg viewBox="0 0 800 300" style={{ width: "90%", maxWidth: 700, opacity: 0.85 }}>
-            {/* Main infinity shape */}
-            <path
-              d="M200,150 C200,80 300,40 400,150 C500,260 600,220 600,150 C600,80 500,40 400,150 C300,260 200,220 200,150 Z"
-              fill="none" stroke="url(#infGrad)" strokeWidth="18" strokeLinecap="round"
-            />
-            <defs>
-              <linearGradient id="infGrad" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="#4361ee" />
-                <stop offset="50%" stopColor="#7209b7" />
-                <stop offset="100%" stopColor="#f72585" />
-              </linearGradient>
-              <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#a0b4ff" />
-                <stop offset="100%" stopColor="#7209b7" />
-              </linearGradient>
-            </defs>
-
-            {/* Left robot */}
-            <g transform="translate(130, 90)">
-              <ellipse cx="0" cy="80" rx="32" ry="36" fill="url(#bodyGrad)" opacity="0.9"/>
-              <circle cx="0" cy="80" r="18" fill="none" stroke="#4361ee" strokeWidth="2"/>
-              <circle cx="-7" cy="78" r="6" fill="#00d4ff" opacity="0.8"/>
-              <circle cx="7" cy="78" r="6" fill="#00d4ff" opacity="0.8"/>
-              {/* Arms */}
-              <path d="M-32,60 Q-70,20 -60,-20" fill="none" stroke="#a0b4ff" strokeWidth="8" strokeLinecap="round"/>
-              <circle cx="-60" cy="-20" r="12" fill="#b5179e"/>
-              <path d="M32,60 Q70,20 60,-20" fill="none" stroke="#a0b4ff" strokeWidth="8" strokeLinecap="round"/>
-              <circle cx="60" cy="-20" r="12" fill="#b5179e"/>
-            </g>
-
-            {/* Right robot */}
-            <g transform="translate(670, 90)">
-              <ellipse cx="0" cy="80" rx="32" ry="36" fill="url(#bodyGrad)" opacity="0.9"/>
-              <circle cx="0" cy="80" r="18" fill="none" stroke="#f72585" strokeWidth="2"/>
-              <circle cx="-7" cy="78" r="6" fill="#ff6b9d" opacity="0.8"/>
-              <circle cx="7" cy="78" r="6" fill="#ff6b9d" opacity="0.8"/>
-              <path d="M-32,60 Q-70,20 -60,-20" fill="none" stroke="#a0b4ff" strokeWidth="8" strokeLinecap="round"/>
-              <circle cx="-60" cy="-20" r="12" fill="#4361ee"/>
-              <path d="M32,60 Q70,20 60,-20" fill="none" stroke="#a0b4ff" strokeWidth="8" strokeLinecap="round"/>
-              <circle cx="60" cy="-20" r="12" fill="#4361ee"/>
-            </g>
-
-            {/* Ground glow */}
-            <ellipse cx="400" cy="290" rx="350" ry="18" fill="url(#infGrad)" opacity="0.2"/>
-          </svg>
-        </div>
+  position: "relative", zIndex: 2, marginTop: 60,
+  width: "100%", maxWidth: 900,
+}}>
+  <Image
+    src="/hero-robot.webp"
+    alt="Hero illustration"
+    width={900}
+    height={340}
+    priority
+    style={{ width: "100%", height: "auto", objectFit: "contain" }}
+  />
+</div>
       </section>
 
       {/* FEATURES SECTION */}
