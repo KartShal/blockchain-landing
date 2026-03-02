@@ -112,11 +112,12 @@ export default function App() {
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         .grad-text {
-          background: linear-gradient(90deg, #f72585 0%, #b5179e 40%, #7209b7 70%, #4361ee 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
+  background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBF 38.02%, #5C24FF 75.83%, #D94FD5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
 
         .btn-primary {
           background: transparent;
@@ -376,11 +377,19 @@ export default function App() {
 
         <div style={{ position: "relative", zIndex: 2, maxWidth: 900, padding: "0 24px" }}>
           <h1
-            className="hero-title grad-text"
-            style={{ fontSize: "clamp(36px, 6vw, 84px)", fontWeight: 800, lineHeight: 1.05, letterSpacing: "-0.03em", marginBottom: 4 }}
-          >
-            THE BEST WEBSITE EVER
-          </h1>
+  className="hero-title grad-text"
+  style={{
+    fontSize: "clamp(28px, 4.5vw, 68px)",
+    fontWeight: 500,
+    lineHeight: 1.1,
+    letterSpacing: "0.02em",
+    fontFamily: "var(--font-montserrat)",
+    marginBottom: 4,
+    whiteSpace: "nowrap",
+  }}
+>
+  THE BEST WEBSITE EVER
+</h1>
           <h2
             className="hero-sub"
             style={{ fontSize: "clamp(28px, 4.5vw, 64px)", fontWeight: 700, color: "#fff", marginBottom: 24, letterSpacing: "-0.02em" }}
